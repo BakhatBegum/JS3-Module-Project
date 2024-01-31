@@ -9,7 +9,7 @@ body{
 }
 .div {
   background-color: white;
- border: 8px solid rgb(95, 80, 80);
+ border: 10px solid rgb(113, 81, 81);
  border-radius: 10px;
  padding: 25px 0px 70px 0px;
  border-top-right-radius: 280px;
@@ -27,6 +27,7 @@ body{
   font-size: 0.3rm;
   font-weight: bolder;
   display: inline-block;
+  border-bottom: 3px solid rgb(85, 63, 63);
 }
 
 @media screen and (max-width: 600px) {

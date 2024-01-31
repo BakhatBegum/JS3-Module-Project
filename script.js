@@ -12,9 +12,9 @@ function makePageForEpisodes(episodeList) {
     const episodeDiv = document.createElement("div");
     episodeDiv.classList.add("div");
     episodeDiv.innerHTML = `
-        <h2 id ="forEpisode">${episode.name}</h2>
-        <p id ="forEpisode"> - S${episodeSeason(episode.season)}E${episodeSeason(episode.number)}</p>
-        <img src = "${episode.image.medium}" alt="${episode.name}">
+        <h2 id ="forEpisode">${episode.name} - S${episodeSeason(episode.season)}E${episodeSeason(episode.number)}</h2>
+       
+ <img src = "${episode.image.medium}" alt="${episode.name}">
         <p>${episode.summary}</p>
     ` 
     rootElem.appendChild(episodeDiv);

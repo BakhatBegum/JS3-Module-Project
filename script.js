@@ -2,6 +2,8 @@
 function setup(num) {
   const allEpisodes = state.getAllEpisodes;
   makePageForEpisodes(allEpisodes);
+  const numb = document.getElementById("num-epis");
+  numb.textContent = " " + allEpisodes.length + " ";
 }
 
 function makePageForEpisodes(episodeList) {
@@ -33,8 +35,14 @@ function render() {
   searching.addEventListener("input", function () {
     state.searchTerm = searching.value.toLowerCase();
     const filteredEpisodes = allEpisodes.filter((episode) => {
-      return episode.name.toLowerCase().includes(state.searchTerm);
+      return (
+        episode.name.toLowerCase().includes(state.searchTerm) ||
+        episode.summary.toLowerCase().includes(state.searchTerm)
+      );
     });
+    const numb = document.getElementById("num-epis");
+    numb.textContent =
+      " " + filteredEpisodes.length + "/" + allEpisodes.length + " ";
     makePageForEpisodes(filteredEpisodes);
   });
 }

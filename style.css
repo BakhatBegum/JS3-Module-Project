@@ -4,7 +4,7 @@ body {
 #root {
   color: rgb(128, 111, 111);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: auto auto auto;
   justify-items: row;
 }
 .div {

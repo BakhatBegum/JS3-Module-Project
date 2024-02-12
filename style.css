@@ -4,7 +4,7 @@ body {
 #root {
   color: rgb(128, 111, 111);
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-items: row;
 }
 .div {
@@ -36,14 +36,10 @@ body {
   border-bottom: 3px solid rgb(85, 63, 63);
 }
 
-@media screen and (max-width: 600px) {
-  #root {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  }
-  .div {
+@media screen and (max-width: 1222px) {
+.div {
     border-top-right-radius: 130px;
     border-bottom-left-radius: 130px;
-    margin: 20px;
+    /* margin: 20px; */
   }
 }

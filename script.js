@@ -2,6 +2,8 @@
 function setup(num) {
   const allEpisodes = state.getAllEpisodes;
   makePageForEpisodes(allEpisodes);
+  const numb = document.getElementById("num-epis");
+  numb.textContent = " " + allEpisodes.length + " ";
 }
 
 function makePageForEpisodes(episodeList) {
@@ -21,25 +23,28 @@ function makePageForEpisodes(episodeList) {
     `;
     rootElem.appendChild(episodeDiv);
   });
-
   function episodeSeason(num) {
     let numString = num.toString();
     let formattedNum = numString.padStart(2, "0");
     return formattedNum;
   }
 }
-
 function render() {
   const searching = document.getElementById("search-bar");
   const allEpisodes = state.getAllEpisodes;
   searching.addEventListener("input", function () {
     state.searchTerm = searching.value.toLowerCase();
     const filteredEpisodes = allEpisodes.filter((episode) => {
-      return episode.name.toLowerCase().includes(state.searchTerm);
+      return (
+        episode.name.toLowerCase().includes(state.searchTerm) ||
+        episode.summary.toLowerCase().includes(state.searchTerm)
+      );
     });
+    const numb = document.getElementById("num-epis");
+    numb.textContent =
+      " " + filteredEpisodes.length + "/" + allEpisodes.length + " ";
     makePageForEpisodes(filteredEpisodes);
   });
 }
 render();
-
-window.onload = setup();
+window.onload = setup;

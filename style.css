@@ -1,46 +1,55 @@
-body {
-  background-color: rgb(242, 237, 230);
-}
 header {
-  background-color: rgb(183, 215, 215);
+  padding: 30px;
+  background-color: rgb(125, 122, 119);
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+select,
+button,
+input {
+  margin: 2%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 3px solid rgb(37, 33, 33);
+}
+button {
+  background-color: #2d2929;
+  color: white;
 }
 #root {
-  color: rgb(128, 111, 111);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-items: row;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 25px;
 }
-.episode {
-  background-color: white;
-  border: 10px solid rgb(113, 81, 81);
+
+#container {
+  /* border: 2px solid #887777ca; */
+  border-radius: 13px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* #conta {
+  display: flex;
+  margin-top: 30px;
+  padding: 10px;
+  border: 2px solid #c3bdbdca;
+} */
+h2 {
+  background-color: #8b8888;
+  text-align: center;
   border-radius: 10px;
-  padding: 25px 0px 70px 0px;
-  border-top-right-radius: 280px;
-  border-bottom-left-radius: 280px;
-  gap: 1%;
-  display: grid;
-  grid-template-columns: repeat(1, 300px);
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
+  margin-top: 0;
+  cursor: pointer;
 }
-#search-bar {
-  margin: 30px 0 0 0;
-  padding: 10px 50px;
-  border: 4px solid rgb(113, 81, 81);
-  margin-left: 40%;
-  border-radius: 20px;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-select {
-  margin: 30px 0;
-  padding: 10px 50px;
-  border: 4px solid rgb(113, 81, 81);
-  margin-left: 15%;
-  border-radius: 20px;
-}
-@media screen and (max-width: 1222px) {
-  .div {
-    border-top-right-radius: 130px;
-    border-bottom-left-radius: 130px;
-    /* margin: 20px; */
-  }
+p {
+  margin: 5px;
+  padding: 5px;
 }

@@ -10,17 +10,15 @@
 
   <body>
     <header>
-      <select id="selection" placeholder="Select Show"></select>
-      <select id="seasonSelection" placeholder="select Episode"></select>
-      <input type="search" id="search-bar" placeholder="🔎 search here" />
-      Displaying<span id="num-epis"></span>episodes
+   <label for="showSelect"> Select Show</label>
+    <select id="selectEpisodes"></select>
+    <label for="showSelect"> Select Episodes</label>
+    <select id="selectShow" ></select>
+    <input id="search" type="search" placeholder="Search"></input>
+    <button id="button">Back Home</button>
     </header>
     <div id="root"></div>
-    <a href="https://tvmaze.com/">TV show Originall come from</a>
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <!-- <script src="episodes.js"></script> -->
 
-    <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
   </body>
 </html>

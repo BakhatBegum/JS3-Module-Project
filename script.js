@@ -75,7 +75,6 @@ getEpisodes.addEventListener("change", function () {
 });
 
 function displayShowInfo(show, showDiv) {
-  console.log("Show object:", show);
   showDiv.innerHTML = `
     <h2 class="forShow">${show.name}</h2>
     <img src="${show.image.medium}" alt="${show.name}">
@@ -163,7 +162,6 @@ root.appendChild(showListingLink);
 
 btn.addEventListener("click", function () {
   fetchShows();
-  fetchEpisodes(showId);
 });
 
 search.addEventListener("input", function (event) {

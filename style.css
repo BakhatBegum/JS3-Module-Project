@@ -5,7 +5,6 @@ header {
   font-size: 20px;
 }
 select,
-button,
 input {
   margin: 2%;
   padding: 8px;
@@ -13,6 +12,8 @@ input {
   border: 3px solid rgb(37, 33, 33);
 }
 button {
+  margin: 2%;
+  padding: 8px;
   background-color: #2d2929;
   color: white;
 }
@@ -23,19 +24,13 @@ button {
 }
 
 #container {
-  /* border: 2px solid #887777ca; */
   border-radius: 13px;
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-/* #conta {
-  display: flex;
-  margin-top: 30px;
-  padding: 10px;
-  border: 2px solid #c3bdbdca;
-} */
+
 h2 {
   background-color: #8b8888;
   text-align: center;
